@@ -1881,3 +1881,107 @@ body.siteNav-off .exe-content {
         padding: 16px;
     }
 }
+
+/* Hard contrast/layout fixes */
+html,
+body {
+    margin: 0;
+}
+
+body.exe-web-site #siteNav {
+    position: fixed;
+    inset: 0 auto 0 0;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    float: none;
+    width: var(--doc-sidebar-width);
+    margin: 0;
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    overflow-y: auto;
+    z-index: 40;
+}
+
+body.exe-web-site .exe-content,
+html.js .in-iframe.exe-web-site::after {
+    box-shadow: none !important;
+}
+
+html.js .in-iframe.exe-web-site::after {
+    display: none !important;
+}
+
+body.exe-web-site #siteNav a,
+body.exe-web-site #siteNav a:visited {
+    background: #f8fafc;
+    border-color: #cbd5e1;
+    border-left: 0;
+    color: #1e293b;
+}
+
+body.exe-web-site #siteNav a:hover,
+body.exe-web-site #siteNav a:focus,
+body.exe-web-site #siteNav a:active {
+    background: #dbeafe;
+    border-color: #93c5fd;
+    color: #1e3a8a;
+}
+
+body.exe-web-site #siteNav a.active,
+body.exe-web-site #siteNav a.active:visited,
+body.exe-web-site #siteNav a.active:hover,
+body.exe-web-site #siteNav a.active:focus,
+body.exe-web-site #siteNav a.active:active {
+    background: #2563eb;
+    border-color: #1d4ed8;
+    color: #ffffff;
+}
+
+body.exe-web-site .exe-content .nav-buttons .nav-button,
+body.exe-web-site .nav-buttons .nav-button,
+body.exe-web-site .nav-buttons .nav-button:visited {
+    background: #2563eb;
+    border-color: #1d4ed8;
+    color: #ffffff;
+    box-shadow: 0 12px 26px rgba(37, 99, 235, 0.28);
+}
+
+body.exe-web-site .exe-content .nav-buttons .nav-button:hover,
+body.exe-web-site .exe-content .nav-buttons .nav-button:focus,
+body.exe-web-site .exe-content .nav-buttons .nav-button:active,
+body.exe-web-site .nav-buttons .nav-button:hover,
+body.exe-web-site .nav-buttons .nav-button:focus,
+body.exe-web-site .nav-buttons .nav-button:active {
+    background: #1d4ed8;
+    border-color: #1e40af;
+    color: #ffffff;
+    outline: 3px solid rgba(147, 197, 253, 0.72);
+    outline-offset: 2px;
+}
+
+body.exe-web-site .exe-content .nav-buttons span.nav-button,
+body.exe-web-site .nav-buttons span.nav-button {
+    background: #e2e8f0;
+    border-color: #94a3b8;
+    color: #475569;
+    outline: 0;
+    box-shadow: none;
+}
+
+@media (max-width: 575.98px) {
+    body.exe-web-site #siteNav {
+        position: relative;
+        inset: auto;
+        width: 100%;
+        overflow-y: visible;
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+
+    body.exe-web-site #siteNav a,
+    body.exe-web-site #siteNav a:visited {
+        border-left: 1px solid #cbd5e1;
+    }
+}
